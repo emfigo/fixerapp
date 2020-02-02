@@ -1,0 +1,14 @@
+python-dotenv==0.10.5
+
+# Client
+requests==2.22.0
+
+# Database
+Flask-SQLAlchemy==2.4.1
+Flask-Migrate==2.5.2
+psycopg2==2.8.4
+
+# Test and Debug
+pytest==5.3.5
+requests-mock==1.7.0
+ipdb==0.12.3
