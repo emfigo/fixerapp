@@ -12,6 +12,8 @@ The aim of this application is to ingest currency exchange data provided from th
 - Since I used a free membership for interacting with fixer.io API, The key `base` is NOT used on retrieving currencies and it will be limited to `EUR` with as many `symbols` as specified later on. The opposite will get you a `105` error code. For more information read the [documentation](https://fixer.io/documentation) 
 - To reduce scope I will assume a lot of happy paths and not handle all possible erros with the Fixer API or what users can do with the API
 - The API will only return a map of rates for an specif date or if not specified the latest available
+- Since the API required is too small, the application will be done with Flask
+- The script mentioned in the pdf was not accessible :(
 
 ### Requirements
 
@@ -114,6 +116,7 @@ Anything else will show you an error message.
 ## Missings
 
 The application was done with the minimum so it could be done during the time expected. As a consequence the app can be productionasible but is missing a few things to do so:
+- I would have added static analysers like pylint, but I run out of time. Probably I will have some erros with docstring and a few things like that are easy to fix.
 - Requires better error handling, at the moment just prints in screen some errors.
 - Ideally we would have alerting.
 - It has no monitoring (essential from every perspective)
