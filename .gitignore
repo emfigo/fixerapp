@@ -1,0 +1,6 @@
+.env
+.dev.env
+.test.env
+**/*.pdf
+venv
+__pycache__
