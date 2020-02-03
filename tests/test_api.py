@@ -16,12 +16,13 @@ class TestApi:
 
     def test_rate_with_valid_base_and_no_date_filter(self, testapp, database):
         client = testapp.test_client()
+        date = datetime.now().date()
         base = 'EUR'
 
         currency_information = CurrencyInformation(
             base_currency = base,
             changes = { 'GBP': 0.81 },
-            change_date = '2020-02-02',
+            change_date = date,
             retrieved_at = datetime.now()
         )
 

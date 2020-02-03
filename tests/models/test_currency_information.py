@@ -11,10 +11,12 @@ class TestCurrencyInformation:
 
     def test_latest_rates_when_no_date_provided_and_only_one_available(self, database):
         base = 'EUR'
+        date = datetime.now().date()
+
         currency_information = CurrencyInformation(
             base_currency = base,
             changes = { 'GBP': 0.81 },
-            change_date = '2020-02-02',
+            change_date = date,
             retrieved_at = datetime.now()
         )
 
@@ -30,10 +32,11 @@ class TestCurrencyInformation:
 
     def test_latest_rates_when_no_date_provided_and_multiple_available(self, database):
         base = 'EUR'
+        date = datetime.now().date()
         currency_information_prev = CurrencyInformation(
             base_currency = base,
             changes = { 'GBP': 0.81 },
-            change_date = '2020-02-02',
+            change_date = date,
             retrieved_at = datetime.now()
         )
 
@@ -43,7 +46,7 @@ class TestCurrencyInformation:
         currency_information = CurrencyInformation(
             base_currency = base,
             changes = { 'GBP': 0.84, 'CAD': 1.45 },
-            change_date = '2020-02-02',
+            change_date = date,
             retrieved_at = datetime.now()
         )
 
