@@ -1,7 +1,7 @@
 python-dotenv==0.10.5
 
 # Client
-requests==2.22.0
+requests==2.31.0
 
 # Database
 Flask-SQLAlchemy==2.4.1
